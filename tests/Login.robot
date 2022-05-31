@@ -45,3 +45,70 @@ Incorrect Email
     Fill Credendials  ${user}
     Submit Credendials
     Shoud Be Type Email
+
+    # DESAFIO #
+###################################################################
+
+# Required Email
+#     [Tags]      desafio1
+
+#     Go To Login Page
+#     Fill Text               id=password        pwd123
+#     Submit Credendials
+#     Alert Span Should Be    E-mail obrigatório
+
+# Required Password
+#     [Tags]      desafio1
+
+#     Go To Login Page
+#     Fill Text               id=email        daniel@hotmail.com
+#     Submit Credendials
+#     Alert Span Should Be    Senha obrigatória
+
+# All Required Fields
+#     [Tags]      desafio1
+
+#     @{expected_alerts}      Create List
+#     ...                     E-mail obrigatório
+#     ...                     Senha obrigatória
+
+#     Go To Login Page
+#     Submit Credendials
+#     Alert Spans Should Be   ${expected_alerts}
+
+###################################################################
+
+Required Email
+    [Tags]      desafio2
+
+    ${user}     Create Dictionary
+    ...         email=${EMPTY}
+    ...         password=pwd123
+
+    Go To Login Page
+    Fill Credendials  ${user}
+    Submit Credendials
+    Alert Span Should Be  E-mail obrigatório
+
+Required Password
+    [Tags]      desafio2
+
+    ${user}     Create Dictionary
+    ...         email=daniel@hotmail.com
+    ...         password=${EMPTY}
+
+    Go To Login Page
+    Fill Credendials  ${user}
+    Submit Credendials
+    Alert Span Should Be  Senha obrigatória
+
+Required Fields
+    [Tags]      desafio2
+
+    @{expected_alerts}      Create List
+    ...                     E-mail obrigatório
+    ...                     Senha obrigatória
+
+    Go To Login Page
+    Submit Credendials
+    Alert Spans Should Be   ${expected_alerts}
