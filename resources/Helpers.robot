@@ -16,3 +16,12 @@ Add User From Database
 #     Fill Signup Form    ${user}
 #     Submit Signup Form
 #     User Should Be Registered
+
+Do Login
+    [Arguments]     ${user}
+
+    Go To Login Page
+    Fill Credendials    ${user}
+    Submit Credendials
+    User Should Be Logged In  ${user}
+    

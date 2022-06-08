@@ -32,7 +32,3 @@ User Should Be Logged In
 
 Shoud Be Type Email
     Get Property     ${INPUT_EMAIL}    type           equal       email
-
-
-
-

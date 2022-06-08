@@ -29,3 +29,4 @@ Alert Spans Should Be
     END
 
     Lists Should Be Equal   ${expected_alerts}      ${got_alerts}
+    

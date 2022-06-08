@@ -8,9 +8,9 @@ Test Teardown   Finish Session
 
 *Test Cases*
 Register a new user
-    [Tags]      happy
+    [Tags]          happy       smoke_test
 
-    ${user}     Factory User
+    ${user}         Factory User    faker
 
     Go To Signup Form
     Fill Signup Form    ${user}
@@ -18,9 +18,9 @@ Register a new user
     User Should Be Registered
     
 Duplicate User
-    [Tags]          dup_email
+    [Tags]          attempt_signup      dup_email
 
-    ${user}                 Factory User
+    ${user}                 Factory User    faker
     Add User From Database  ${user}
 
     Go To Signup Form
@@ -31,7 +31,7 @@ Duplicate User
 Wrong Email
     [Tags]          attempt_signup
 
-    ${user}         Factory Wrong Email
+    ${user}         Factory User    wrong_email
 
     Go To Signup Form
     Fill Signup Form    ${user}

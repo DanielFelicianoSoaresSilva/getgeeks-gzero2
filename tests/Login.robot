@@ -8,8 +8,9 @@ Test Teardown   Finish Session
 
 *Test Cases*
 User Login
+    [Tags]      smoke_test
 
-    ${user}                 Factory User Login
+    ${user}                 Factory User    login
 
     Go To Login Page
     Fill Credendials        ${user}
