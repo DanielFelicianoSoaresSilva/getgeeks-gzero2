@@ -3,7 +3,7 @@ Documentation       Geek Actions
 
 *Keywords*
 Go To Geek Form
-    Click       css=a[href="/be-geek"] >> text=Seja um Geek
+    Click           css=a[href="/be-geek"] >> text=Seja um Geek
 
     Wait For Elements State     css=.be-geek-form       visible     5
 
@@ -36,4 +36,4 @@ Geek Form Should Be Success
 
 Reset Geek Form
 
-    Execute Javascript      document.getElementsByClassName("be-geek-form")[0].reset();
+    Evaluate Javascript      css=.be-geek-form  document.getElementsByClassName("be-geek-form")[0].reset();
