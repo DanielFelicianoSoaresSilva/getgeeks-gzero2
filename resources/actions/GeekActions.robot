@@ -36,4 +36,5 @@ Geek Form Should Be Success
 
 Reset Geek Form
 
-    Execute Javascript      document.getElementsByClassName("be-geek-form")[0].reset();
+    #Execute Javascript      document.getElementsByClassName("be-geek-form")[0].reset();
+    Evaluate Javascript      css=.be-geek-form  document.getElementsByClassName("be-geek-form")[0].reset();
