@@ -1,5 +1,5 @@
 robot -l none -o none -r none tasks/Delorean.robot
-pabot -d ./logs -v BROWSER:chromium -v HEADLESS:False tests/
+pabot -d ./logs -v BROWSER:chromium -v HEADLESS:true -e smoke_test tests/
 
 rm -rf ./logs/browser
 mkdir ./logs/browser
