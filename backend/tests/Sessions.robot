@@ -31,6 +31,8 @@ User Session
     ${size}             Get Length              ${response.json()}[token]
     ${espected_size}    Convert To Integer      140
 
+    #Should Be True      ${size} > 0
+
     Should Be Equal     ${espected_size}        ${size}
     Should Be Equal     10d                     ${response.json()}[expires_in]
 
