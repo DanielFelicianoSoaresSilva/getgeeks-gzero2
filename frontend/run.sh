@@ -1,5 +1,5 @@
 robot -l none -o none -r none tasks/Delorean.robot
-pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:true -e smoke_test tests/
+pabot -x xunit.xml -d ./logs -v BROWSER:chromium -v HEADLESS:true tests/
 
 rm -rf ./logs/browser
 mkdir ./logs/browser
