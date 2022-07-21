@@ -11,23 +11,26 @@ def users_to_insert_db():
     return [
         factory_user('login'),
         factory_user('be_geek'),
-        factory_user('attempt_be_geek')
+        factory_user('attempt_be_geek'),
+        factory_user('search_alien'),
+        factory_user('search_common'),
+        factory_user('searcher')
     ]
 
 def factory_user(target):
 
     data = {
         'faker': {
-            "name": fake.first_name(),
-            "lastname": fake.last_name(),
-            "email": fake.free_email(),
-            "password": "pwd123"
+            'name': fake.first_name(),
+            'lastname': fake.last_name(),
+            'email': fake.free_email(),
+            'password': 'pwd123'
         },
         'wrong_email': {
-           "name": 'Pedro',
-            "lastname": 'De Lara',
-            "email": 'pedro_dl*gmail.com',
-            "password": "pwd123" 
+           'name': 'Pedro',
+            'lastname': 'De Lara',
+            'email': 'pedro_dl*gmail.com',
+            'password': 'pwd123' 
         },
         'login': {
             'name': 'Daniel',
@@ -60,6 +63,38 @@ def factory_user(target):
                 'work': 'Remoto',
                 'cost': '150'
             }
+        },
+        'searcher': {
+            'name': 'Johnny',
+            'lastname': 'Lawrence',
+            'email': 'jonny@cobrakai.com',
+            'password': 'pwd123'
+        },
+        'search_alien': {
+            'name': 'Dok',
+            'lastname': 'Ock',
+            'email': 'dok@oscorp.com',
+            'password': 'pwd123',
+            'geek_profile': {
+                'whatsapp': '11999991001',
+                'desc': 'Faço conserto de qualquer impressora. Matricial a fita, Matricial a fita colorida, a laser, a jato de tinta e também impressora 3D.',
+                'printer_repair': 'Sim',
+                'work': 'Presencial',
+                'cost': '250'
+            }
+        },
+        'search_common': {
+            'name': 'Peter',
+            'lastname': 'Parker',
+            'email': 'parker@oscorp.com',
+            'password': 'pwd123',
+            'geek_profile': {
+                'whatsapp': '11999991002',
+                'desc': 'Faço instalação de distribuições linux no seu computador PC x86 ou x64 intel ou AMD.',
+                'printer_repair': 'Não',
+                'work': 'Remoto',
+                'cost': '200'
+            }
         }
     }
 
@@ -67,10 +102,10 @@ def factory_user(target):
 
 # def factory_user():
 #     user = {
-#         "name": fake.first_name(),
-#         "lastname": fake.last_name(),
-#         "email": fake.free_email(),
-#         "password": "pwd123"
+#         'name': fake.first_name(),
+#         'lastname': fake.last_name(),
+#         'email': fake.free_email(),
+#         'password': 'pwd123'
 #     }
 
 #     return user
@@ -80,10 +115,10 @@ def factory_user(target):
 #     first_name = fake.first_name()
 
 #     return {
-#         "name": first_name,
-#         "lastname": fake.last_name(),
-#         "email": first_name.lower() + "&gmail.com",
-#         "password": "pwd123"
+#         'name': first_name,
+#         'lastname': fake.last_name(),
+#         'email': first_name.lower() + '&gmail.com',
+#         'password': 'pwd123'
 #     }
 
 # def factory_user_login():
